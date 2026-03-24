@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>O2C Context Graph</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+  <script src="https://unpkg.com/cytoscape@3.26.0/dist/cytoscape.min.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div>
+        <h1>Order-to-Cash Context Graph</h1>
+        <p>Explore relationships across orders, deliveries, billing, and payments.</p>
+      </div>
+      <div class="search">
+        <input id="searchInput" type="text" placeholder="Search node id or label" />
+        <button id="searchBtn">Search</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="graph-panel">
+        <div id="graph"></div>
+        <div class="graph-controls">
+          <button id="resetBtn">Reset View</button>
+          <button id="expandBtn">Expand Selected</button>
+        </div>
+      </section>
+
+      <section class="side-panel">
+        <div class="card">
+          <h2>Node Details</h2>
+          <pre id="nodeDetails">Click a node to inspect.</pre>
+        </div>
+
+        <div class="card chat">
+          <h2>Ask the Data</h2>
+          <div id="chatLog" class="chat-log"></div>
+          <div class="chat-input">
+            <input id="chatInput" type="text" placeholder="Ask a question about orders, deliveries, billing, payments..." />
+            <button id="chatSend">Send</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
