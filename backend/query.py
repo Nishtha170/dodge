@@ -3,7 +3,7 @@ import os
 import re
 from typing import Any, Dict, List, Tuple
 
-from db import get_connection
+from backend.db import get_connection
 from llm import chat_completion
 
 SCOPE_KEYWORDS = [

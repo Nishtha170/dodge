@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
-from db import get_connection
+from backend.db import get_connection
 from query import answer_with_llm, execute_sql, generate_sql, get_schema_summary, is_in_scope, safe_sql
 
 BASE_DIR = Path(__file__).resolve().parent
