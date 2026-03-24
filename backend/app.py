@@ -6,8 +6,12 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
-from backend.db import get_connection
-from query import answer_with_llm, execute_sql, generate_sql, get_schema_summary, is_in_scope, safe_sql
+try:
+    from .db import get_connection
+    from .query import answer_with_llm, execute_sql, generate_sql, get_schema_summary, is_in_scope, safe_sql
+except ImportError:
+    from db import get_connection
+    from query import answer_with_llm, execute_sql, generate_sql, get_schema_summary, is_in_scope, safe_sql
 
 BASE_DIR = Path(__file__).resolve().parent
 STATIC_DIR = BASE_DIR / "static"

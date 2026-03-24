@@ -4,7 +4,10 @@ import sqlite3
 from pathlib import Path
 from typing import Any, Dict, Iterable, List
 
-from db import DB_PATH
+try:
+    from .db import DB_PATH
+except ImportError:
+    from db import DB_PATH
 
 DATASET_DIR = Path(os.environ.get("O2C_DATASET_DIR", Path(__file__).resolve().parents[1] / "sap-o2c-data"))
 

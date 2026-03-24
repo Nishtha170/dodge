@@ -3,8 +3,12 @@ import os
 import re
 from typing import Any, Dict, List, Tuple
 
-from backend.db import get_connection
-from llm import chat_completion
+try:
+    from .db import get_connection
+    from .llm import chat_completion
+except ImportError:
+    from db import get_connection
+    from llm import chat_completion
 
 SCOPE_KEYWORDS = [
     "order",
