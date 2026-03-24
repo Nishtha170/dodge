@@ -58,8 +58,8 @@ Open http://localhost:8000
 - Only `SELECT` statements are allowed.
 
 ## Submission Checklist
-- Working demo link: TBD
-- Public GitHub repository: TBD
+- Working demo link: https://dodge-o6x2.onrender.com/
+- Public GitHub repository: https://github.com/Nishtha170/dodge
 - README with architecture and LLM prompting strategy: included
 - AI coding session logs: `ai_sessions/codex_session_log.md`
 
